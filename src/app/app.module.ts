@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 import { CoursesComponent } from './cources.component';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ import { CourseComponent } from './course/course.component';
     BrowserModule
   ],
   providers: [
+    CoursesService,
     AuthorsService,
   ],
   bootstrap: [AppComponent]
