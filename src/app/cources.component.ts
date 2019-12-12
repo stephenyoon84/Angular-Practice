@@ -15,7 +15,7 @@ import { Component } from '@angular/core'
                 <td [attr.colspan]="colSpan"></td>
             </tr>
         </table>
-        <button [style.backgroundColor]="isActive ? 'blue' : 'white'" class="btn btn-primary" [class.active]="isActive">Save</button>
+        <button (click)="onSave($event)" class="btn btn-primary" [class.active]="isActive">Save</button>
     `
 })
 export class CoursesComponent {
@@ -33,5 +33,8 @@ export class CoursesComponent {
         return this.title;
     }
 
-
+    onSave($event) {
+        console.log($event)
+        // this.isActive = !this.isActive;
+    }
 }
