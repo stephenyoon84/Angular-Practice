@@ -10,7 +10,7 @@ import { Component } from '@angular/core'
         
         <h2 [textContent]="title"></h2>
         <img [src]="imageUrl" />
-        <input #email (keyup.enter)="onKeyUp(email.value)" />
+        <input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />
         <table>
             <tr>
                 <td [attr.colspan]="colSpan"></td>
@@ -25,6 +25,7 @@ export class CoursesComponent {
     imageUrl = "http://lorempixel.com/400/200";
     colSpan = 2;
     isActive = true;
+    email = "me@example.com";
 
     constructor(service: CoursesService) {
         this.courses = service.getCourses();
@@ -34,8 +35,8 @@ export class CoursesComponent {
         return this.title;
     }
 
-    onKeyUp(email){
-        console.log(email);
+    onKeyUp(){
+        console.log(this.email);
     }
 
     onSave($event) {
