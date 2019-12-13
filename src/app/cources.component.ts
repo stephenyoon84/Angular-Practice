@@ -34,6 +34,7 @@ export class CoursesComponent {
     }
 
     onSave($event) {
+        $event.stopPropagation();
         console.log($event)
         // this.isActive = !this.isActive;
     }
