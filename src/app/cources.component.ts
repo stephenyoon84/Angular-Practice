@@ -11,6 +11,7 @@ import { Component } from '@angular/core'
         <h2 [textContent]="title"></h2>
         <img [src]="imageUrl" />
         <input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />
+        <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
         <table>
             <tr>
                 <td [attr.colspan]="colSpan"></td>
