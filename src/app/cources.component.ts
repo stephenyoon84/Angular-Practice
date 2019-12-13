@@ -10,6 +10,7 @@ import { Component } from '@angular/core'
         
         <h2 [textContent]="title"></h2>
         <img [src]="imageUrl" />
+        <input (keyup.enter)="onKeyUp()" />
         <table>
             <tr>
                 <td [attr.colspan]="colSpan"></td>
@@ -31,6 +32,10 @@ export class CoursesComponent {
 
     getTitle(){
         return this.title;
+    }
+
+    onKeyUp(){
+        console.log("Enter was pressed");
     }
 
     onSave($event) {
