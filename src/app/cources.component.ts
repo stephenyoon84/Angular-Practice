@@ -18,11 +18,11 @@ import { Component } from '@angular/core'
             </tr>
         </table>
         <button (click)="onSave($event)" class="btn btn-primary" [class.active]="isActive">Save</button> <br/>
-        {{ courses.title }} <br/>
-        {{ courses.students }} <br/>
-        {{ courses.rating | number }} <br/>
-        {{ courses.price }} <br/>
-        {{ courses.releaseDate }} <br/>
+        {{ courses.title | uppercase | lowercase }} <br/>
+        {{ courses.students | number }} <br/>
+        {{ courses.rating | number:'1.2-2' }} <br/>
+        {{ courses.price | currency:'AUD':true:'3.2-2' }} <br/>
+        {{ courses.releaseDate | date:'shortDate' }} <br/>
     `
 })
 export class CoursesComponent {
