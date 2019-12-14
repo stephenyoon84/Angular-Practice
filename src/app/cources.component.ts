@@ -21,7 +21,7 @@ import { Component } from '@angular/core'
         {{ courses.title | uppercase | lowercase }} <br/>
         {{ courses.students | number }} <br/>
         {{ courses.rating | number:'1.2-2' }} <br/>
-        {{ courses.price | currency:'AUD':true:'3.2-2' }} <br/>
+        {{ courses.price | currency:'KRW':true:'3.2-2' }} <br/>
         {{ courses.releaseDate | date:'shortDate' }} <br/>
     `
 })
